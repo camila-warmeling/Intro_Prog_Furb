@@ -26,6 +26,7 @@ public class FuncoesDoJava {
 
         Random random = new Random();
         int numeroAle = random.nextInt(1000); //gera um número aleatório até o valor indicado
-
+        System.out.println(numeroAle);
+        
     }
 }
