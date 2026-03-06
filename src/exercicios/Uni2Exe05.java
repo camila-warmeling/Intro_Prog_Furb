@@ -9,22 +9,22 @@ public class Uni2Exe05 {
         // DIFERENCA = (A * B - C * D).
         int valorA, valorB, valorC, valorD, diferenca;
 
-        Scanner usuario = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Digite o valor de A:");
-        valorA = usuario.nextInt();
+        valorA = input.nextInt();
 
         System.out.println("Digite o valor de B:");
-        valorB = usuario.nextInt();
+        valorB = input.nextInt();
 
         System.out.println("Digite o valor de C:");
-        valorC = usuario.nextInt();
+        valorC = input.nextInt();
 
         System.out.println("Digite o valor de D:");
-        valorD = usuario.nextInt();
+        valorD = input.nextInt();
 
         diferenca = (valorA * valorB) - (valorC * valorD);
 
         System.out.println("A diferença entre AxB e CxD é: " + diferenca);
-        usuario.close();
+        input.close();
     }
 }

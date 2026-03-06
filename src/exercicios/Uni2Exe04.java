@@ -9,14 +9,14 @@ public class Uni2Exe04 {
         // sendo que a nota vai de 0.0 a 10.0.
         double nota1, nota2, mediaPonderada;
 
-        Scanner usuario = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Digite a primeira nota:");
-        nota1 = usuario.nextFloat();
+        nota1 = input.nextFloat();
         System.out.println("Digite a segunda nota:");
-        nota2 = usuario.nextFloat();
+        nota2 = input.nextFloat();
 
         mediaPonderada = (nota1 * 3.5 + nota2 * 7.5)/11;
         System.out.println("A média ponderada final é: " + mediaPonderada);
-        usuario.close();
+        input.close();
     }
 }

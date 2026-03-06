@@ -12,20 +12,20 @@ public class Uni2Exe07 {
     float salarioFixo, totalVendas, salarioTotal;
     float comissao = 0.15f;
 
-    Scanner usuario = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
     System.out.print("Digite o nome do vendedor:");
-    nomeVendedor = usuario.next();
+    nomeVendedor = input.next();
 
     System.out.print("Digite o salário fixo:");
-    salarioFixo = usuario.nextFloat();
+    salarioFixo = input.nextFloat();
 
     System.out.print("Digite o total de vendas do vendedor " + nomeVendedor + ":");
-    totalVendas = usuario.nextFloat();
+    totalVendas = input.nextFloat();
 
     salarioTotal = salarioFixo + (totalVendas * comissao);
     
     System.out.println("O salário total ao final do mês é R$" + String.format("%.2f", salarioTotal));
 
-    usuario.close();
+    input.close();
     }
 }
