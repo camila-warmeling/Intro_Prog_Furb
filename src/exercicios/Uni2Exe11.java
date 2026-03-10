@@ -31,13 +31,14 @@ public class Uni2Exe11 {
 
         double areaTriangulo = (valorA * valorC)/2;
         double areaCirculo = (Math.pow(valorC, 2)) * pi;
-        double areaTrapezio = ((valorA * valorB)*valorC) / 2 ;
+        double areaTrapezio = ((valorA + valorB)*valorC) / 2 ;
         double areaQuadrado = Math.pow(valorB, 2);
         double areaRetangulo = valorA * valorB;
 
         System.out.printf("A área do Triângulo é %.2f %n" + "A área do Circulo é %.2f %n" +  
         "A área do Trapézio é %.2f %n" +  "A área do Quadrado é %.2f %n" +  "A área do Retângulo é %.2f %n",
         areaTriangulo, areaCirculo, areaTrapezio, areaQuadrado, areaRetangulo);
+        
         input.close();
     }
 }
