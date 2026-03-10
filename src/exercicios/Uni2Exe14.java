@@ -1,0 +1,40 @@
+package exercicios;
+
+import java.util.Scanner;
+
+public class Uni2Exe14 {
+    public static void main(String[] args) {
+        //Leia um valor inteiro. A seguir, calcule o menor número de notas possíveis (cédulas) no qual o valor pode ser decomposto.
+        //As notas consideradas são de 100, 50, 20, 10, 5, 2 e 1. A seguir mostre o valor lido e a relação de notas necessárias.
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Digite o valor total");
+        int valor = input.nextInt();
+
+        int nota100 = valor/100;
+        int resto = valor%100;
+
+        int nota50 = resto/50;
+        resto = resto%50;
+
+        int nota20 = resto/20;
+        resto = resto%20;
+
+        int nota10 = resto/10;
+        resto = resto%10;
+
+        int nota5 = resto/5;
+        resto = resto%5;
+
+        int nota2 = resto/2;
+        resto = resto%2;
+
+        int nota1 = resto/1;
+        resto = resto%1;
+
+        System.out.printf("O valor %d pode ser decomposto em %d notas de 100, %d notas de 50, %d notas de 20, %d notas de 10, %d notas de 5, %d notas de 2, %d notas de 1", 
+        valor, nota100, nota50, nota20, nota10, nota5, nota2, nota1);
+
+        input.close();
+    }
+}
