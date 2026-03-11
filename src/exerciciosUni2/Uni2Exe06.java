@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class Uni2Exe06 {
     public static void main(String[] args) {
     
-        float horasTrabalhadas, valorHora, salario;
+        double horasTrabalhadas, valorHora, salario;
         int numeroFuncionario;
 
         Scanner input = new Scanner(System.in);
+
         System.out.print("Digite o número do funcionário:");
         numeroFuncionario = input.nextInt();
 
@@ -20,8 +21,9 @@ public class Uni2Exe06 {
 
         salario = horasTrabalhadas * valorHora;
 
-        System.out.printf("O funcionário de número %03d" + " recebeu o salário no valor de R$ %.2f" + " pelas quantidade de horas trabalhadas %.1f", numeroFuncionario, salario, horasTrabalhadas);
-        //printf para utilizar várias variáveis no meio das strings
+        System.out.printf("O funcionário de número %03d recebeu o salário no valor de R$ %.2f pelas %.2f de horas trabalhadas", numeroFuncionario, salario, horasTrabalhadas);
+        //printf para utilizar várias variáveis no meio das strings  
+        
         input.close();
     }
 }
