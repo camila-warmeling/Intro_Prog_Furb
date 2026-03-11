@@ -15,16 +15,22 @@ public class Uni2Exe17 {
         System.out.println("Digite o número de dependentes:");
         double dependentes = input.nextInt();
 
-        double salarioHoras = horasTrabalhadas * 10;
-        double salarioDependentes = dependentes * 60;
-        double salarioBruto = salarioHoras + salarioDependentes;
+        if (horasTrabalhadas < 0 || dependentes < 0){
+            System.out.println("Valores inválidos!");
+        }
 
-        double descontoINSS = salarioHoras * 0.085;
-        double descontoIR = salarioHoras * 0.05;
-        double salarioLiquido = salarioBruto - descontoINSS - descontoIR;
+        else{
+            double salarioHoras = horasTrabalhadas * 10;
+            double salarioDependentes = dependentes * 60;
+            double salarioBruto = salarioHoras + salarioDependentes;
 
-        System.out.printf("O funcionário %s teve:%nSalário bruto: R$%.2f %nSalário líquido: R$%.2f", nome, salarioBruto, salarioLiquido);
+            double descontoINSS = salarioHoras * 0.085;
+            double descontoIR = salarioHoras * 0.05;
+            double salarioLiquido = salarioBruto - descontoINSS - descontoIR;
 
+            System.out.printf("O funcionário %s teve:%nSalário bruto: R$%.2f %nSalário líquido: R$%.2f", nome, salarioBruto, salarioLiquido);
+        }
+        
         input.close();
     }
 }
