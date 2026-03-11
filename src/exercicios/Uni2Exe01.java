@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Uni2Exe01 {
     public static void main(String[] args) {
-        int numero1, numero2, soma; //declarando duas variáveis do tipo int sem definir um valor
+        int numero1, numero2, soma; //declarando variáveis do tipo int sem definir um valor
         Scanner input = new Scanner(System.in);
         System.out.println("Digite o primeiro número:");
         numero1 = input.nextInt();

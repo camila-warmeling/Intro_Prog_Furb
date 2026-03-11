@@ -4,10 +4,6 @@ import java.util.Scanner;
 
 public class Uni2Exe09 {
     public static void main(String[] args) {
-        //Uma pessoa foi até uma casa de câmbio trocar dólares por reais. 
-        // Para isto ela entregou um valor em dólares para o atendente. 
-        // Considerando que o atendente tem a cotação do dólar, 
-        // calcule quantos reais o atendente deve devolver para a pessoa.
 
         double cotacaoDolar = 5.26;
         double valorDolar, valorReais;

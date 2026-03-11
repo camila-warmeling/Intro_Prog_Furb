@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Uni2Exe05 {
     public static void main(String[] args) {
-        //Leia quatro valores inteiros A, B, C e D. A seguir, calcule e mostre a 
-        // diferença do produto de A e B pelo produto de C e D segundo a fórmula: 
-        // DIFERENCA = (A * B - C * D).
+
         int valorA, valorB, valorC, valorD, diferenca;
 
         Scanner input = new Scanner(System.in);
