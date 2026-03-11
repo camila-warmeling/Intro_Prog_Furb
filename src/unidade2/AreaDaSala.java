@@ -1,3 +1,5 @@
+package unidade2; //pasta onde o arquivo está
+
 public class AreaDaSala {
     public static void main(String[] args) {
         int altura = 3;

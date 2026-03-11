@@ -1,3 +1,5 @@
+package unidade2;
+
 public class Exemplo1 {
     public static void main(String[] args) {
         System.out.println("Aula 25/02/2026");

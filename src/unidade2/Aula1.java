@@ -1,3 +1,5 @@
+package unidade2;
+
 public class Aula1 {
     public static void main(String[] args) {
         System.out.println("Meu primeiro código");

@@ -1,3 +1,5 @@
+package unidade2;
+
 public class TesteMenorValor {
     public static void main(String[] args) {
         int valor1 = 10;

@@ -1,4 +1,4 @@
-package exercicios;
+package exerciciosUni2;
 import java.util.Scanner;
 
 public class Uni2Exe07 {
