@@ -30,7 +30,6 @@ public class Uni2Exe14 {
         resto = resto%2;
 
         int nota1 = resto/1;
-        resto = resto%1;
 
         System.out.printf("O valor %d pode ser decomposto em: %n" + 
         " %d notas de 100 %n %d notas de 50 %n %d notas de 20 %n %d notas de 10 %n %d notas de 5%n %d notas de 2 %n %d notas de 1", 
