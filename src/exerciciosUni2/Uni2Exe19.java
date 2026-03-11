@@ -4,9 +4,7 @@ import java.util.Scanner;
 
 public class Uni2Exe19 {
     public static void main(String[] args) {
-        //Num sistema de equações o valor de A equivale ao valor de B e o valor de C equivale ao valor de D. 
-        //Leia os valores de B, C e D e calcule o valor de A.
-
+        
         Scanner input = new Scanner(System.in);
 
         System.out.println("Digite o valor B:");
