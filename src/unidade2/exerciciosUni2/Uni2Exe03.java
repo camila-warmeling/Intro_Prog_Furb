@@ -1,4 +1,4 @@
-package exerciciosUni2;
+package unidade2.exerciciosUni2;
 
 import java.util.Scanner;
 
