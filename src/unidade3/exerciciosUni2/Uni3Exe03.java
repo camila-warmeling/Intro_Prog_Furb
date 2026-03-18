@@ -32,9 +32,4 @@ public class Uni3Exe03 {
 
         input.close();
     }
-
-
-
-
-
 }
