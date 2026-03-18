@@ -11,7 +11,7 @@ public class Uni3Exe06 {
     }
 
     public float calcularvalorAPagar(){
-        float valorPrato = (pesoPratoMontado - 0.75f) * 25;
+        float valorPrato = (this.pesoPratoMontado - 0.75f) * 25;
         return valorPrato;
     }
 

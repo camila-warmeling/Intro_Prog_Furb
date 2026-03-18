@@ -15,7 +15,7 @@ public class Uni3Exe07 {
     }
 
     public float calcularQuantidadeLitros(){
-        float litrosTotal = (quantLata * 0.35f) + (quantGarrafaMedia * 0.6f) + (quantGarrafaGrande * 2);
+        float litrosTotal = (this.quantLata * 0.35f) + (this.quantGarrafaMedia * 0.6f) + (this.quantGarrafaGrande * 2);
         return  litrosTotal;
     }
 
@@ -32,7 +32,7 @@ public class Uni3Exe07 {
 
         Uni3Exe07 classeExec = new Uni3Exe07(lata, garrafaMedia, garrafaGrande);
         float quantTotal = classeExec.calcularQuantidadeLitros();
-        System.out.println("A quantidade de litros comprados de refrigerante é :" + String.format("%.2f", quantTotal));
+        System.out.println("A quantidade de litros comprados de refrigerante é: " + String.format("%.2f", quantTotal));
 
         input.close();
     }

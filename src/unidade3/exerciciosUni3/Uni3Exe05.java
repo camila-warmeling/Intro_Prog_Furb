@@ -12,7 +12,7 @@ public class Uni3Exe05 {
 
     public float calcularCustoTotalGranjaorGalinha(){
         float custoTotalGalinha = 4 + (2 * 3.5f);
-        float custoTotalGranja = custoTotalGalinha * quantGalinhas;
+        float custoTotalGranja = custoTotalGalinha * this.quantGalinhas;
         return custoTotalGranja;
     }
 
