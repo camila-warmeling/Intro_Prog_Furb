@@ -29,8 +29,8 @@ public class Uni3Exe04 {
         System.out.println("Digite a terceira nota:");
         float n3 = input.nextFloat();
 
-        Uni3Exe04 classe = new Uni3Exe04(n1, n2, n3);
-        float calcular = classe.calcularMediaPonderada();
+        Uni3Exe04 classeExec = new Uni3Exe04(n1, n2, n3);
+        float calcular = classeExec.calcularMediaPonderada();
         System.out.println("A média ponderada do aluno é:" + String.format("%.2f", calcular));
 
         input.close();
