@@ -3,7 +3,7 @@ package unidade3.exerciciosUni3;
 import java.util.Scanner;
 
 public class Uni3Exe02 {
-    //atributos
+    
     private float valorDoCalcado;
     private float percentualDeDesconto;
 
@@ -23,9 +23,9 @@ public class Uni3Exe02 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Digite o valor do calçado:");
-
         float valorTenis = input.nextFloat();
         float percentualDeDesconto = 12.0f;
+        
         Uni3Exe02 calcado = new Uni3Exe02(valorTenis, percentualDeDesconto);
         float valorDesconto = calcado.valorEmDinheiroDoDesconto(valorTenis, percentualDeDesconto);
         float valorAPagar = calcado.valorTotalAPagar();
