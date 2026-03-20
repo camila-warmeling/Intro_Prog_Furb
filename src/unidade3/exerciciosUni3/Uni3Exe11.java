@@ -14,7 +14,7 @@ public class Uni3Exe11 {
     }
 
     public float calcularTemperatura(){
-        float temperaturaF = (temperaturaCelsius*9/5)+32;
+        float temperaturaF = (this.temperaturaCelsius*9/5)+32;
         return temperaturaF;
     }
 

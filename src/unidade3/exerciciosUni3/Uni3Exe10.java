@@ -15,7 +15,7 @@ public class Uni3Exe10 {
     }
 
     public double calcularComprimentoHipotenusa(){
-        double hipotenusa = Math.sqrt((Math.pow(catetoAdjacente, 2)) + (Math.pow(catetoOposto, 2))); 
+        double hipotenusa = Math.sqrt((Math.pow(this.catetoAdjacente, 2)) + (Math.pow(this.catetoOposto, 2))); 
         return hipotenusa;
     }
 

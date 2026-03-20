@@ -13,12 +13,12 @@ public class Uni3Exe12 {
     }
 
     public float calcularSalarioHorasTrabalhadas(){
-        float salarioHorasTrabalhadas = horasTrabalhadas * 10;
+        float salarioHorasTrabalhadas = this.horasTrabalhadas * 10;
         return salarioHorasTrabalhadas; 
     }
 
     public int calcularSalarioQuantidadeDeDependentes(){
-        int salarioQuantDependentes = quantDependentes * 60;
+        int salarioQuantDependentes = this.quantDependentes * 60;
         return salarioQuantDependentes;
     }
 
