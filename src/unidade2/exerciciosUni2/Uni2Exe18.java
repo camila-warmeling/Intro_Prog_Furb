@@ -17,8 +17,8 @@ public class Uni2Exe18 {
         }
 
         else{
-            double metrosQuadrados = comprimento * altura; //Math.ceil arredonda o número 
-            double quantAzulejos = Math.ceil(metrosQuadrados * 9);
+            double metrosQuadrados = comprimento * altura; 
+            double quantAzulejos = Math.ceil(metrosQuadrados * 9);//Math.ceil arredonda o número 
             double valorGasto = quantAzulejos * 12.50;
 
             System.out.println("O valor gasto para comprar os azulejos é de R$" + String.format("%.2f", valorGasto));
