@@ -82,7 +82,7 @@ public class Calculadora {
             resultado =  numero1 / numero2;
         }
         else{
-            System.out.println("o numero 2 deve ser maior que zero!");
+            resultado = 0;
         }
     }
 
@@ -91,12 +91,8 @@ public class Calculadora {
     }
 
     private void restoDivisao(float numero1, float numero2) {
-        if(numero2 > 0){
             resultado =  numero1 % numero2;
-        }
-        else{
-            System.out.println("o numero 2 deve ser maior que zero!");
-        }
+        
     }
 }  
     
