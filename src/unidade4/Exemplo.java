@@ -21,7 +21,7 @@ public class Exemplo {
         String respostaEstudante = sc.next();
         boolean estudante = false;
         if (respostaEstudante.equalsIgnoreCase("Sim") || respostaEstudante.equalsIgnoreCase("S")){
-           doador = true;
+           estudante = true;
         }
     //quando a variável é um boolean, se ela precisa ser verdadeira não precisa ser declarada
         if (idade < 18 || idade >=60 || doador || estudante){
