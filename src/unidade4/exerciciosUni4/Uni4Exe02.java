@@ -2,8 +2,6 @@ package unidade4.exerciciosUni4;
 
 import java.util.Scanner;
 
-//Dado um valor inteiro maior do que 0 informe se o valor é par ou ímpar.
-
 public class Uni4Exe02 {
 
     private int valorInteiro;
