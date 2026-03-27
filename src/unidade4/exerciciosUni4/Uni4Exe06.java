@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class Uni4Exe06 {
 
-    private String caracterUsuario;
+    private char caracterUsuario;
     private String resultado;
 
-    public Uni4Exe06(String caracterUsuario){
+    public Uni4Exe06(char caracterUsuario){
         this.caracterUsuario = caracterUsuario;
     }
 
     public String verificarCaracter(){
-        if(this.caracterUsuario.equals("M")){
+        if(this.caracterUsuario == 'M'){
             resultado = "Masculino";
         }
-        else if(this.caracterUsuario.equals("F")){
+        else if(this.caracterUsuario == 'F'){
             resultado = "Feminino";
         }
-        else if(this.caracterUsuario.equals("I")){
+        else if(this.caracterUsuario == 'I'){
             resultado = "Não Informado";
         }
         else{
@@ -32,9 +32,9 @@ public class Uni4Exe06 {
         Scanner input = new Scanner(System.in);
         System.err.println(" M - Masculino\n F - feminino\n I - prefiro não informar");
         System.out.println("Digite o caracter:");
-        String caracter = input.next().toUpperCase();
+        char letra = input.next().toUpperCase().charAt(0);
 
-        Uni4Exe06 classeExec = new Uni4Exe06(caracter);
+        Uni4Exe06 classeExec = new Uni4Exe06(letra);
         System.out.println(classeExec.verificarCaracter());
 
         input.close();
