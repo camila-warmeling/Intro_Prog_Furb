@@ -27,15 +27,15 @@ public class Uni4Exe14 {
     }
 
     public void verificarMesFevereiro(){
-            if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0){
-                anoBissexto = true;
-            }
-            if((anoBissexto && dia == 29) || (dia > 0 && dia <29 )){
-                diaCorreto = true;
-            }
-            else{
-                diaCorreto = false;
-            }
+        if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0){
+            anoBissexto = true;
+        }
+        if((anoBissexto && dia == 29) || (dia > 0 && dia <29 )){
+            diaCorreto = true;
+        }
+        else{
+            diaCorreto = false;
+        }
     }
 
     public void verificarDataCorreta(){
@@ -46,6 +46,7 @@ public class Uni4Exe14 {
             if(mes == 2){
                 verificarMesFevereiro();
             }
+            //meses com 31 dias
             else if(mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
                 if(dia > 0 && dia <= 31){
                     diaCorreto = true;
