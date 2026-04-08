@@ -33,14 +33,14 @@ public class Uni4Exe19 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.err.println("Digite o valor do ponto x:");
+        System.out.println("Digite o valor do ponto x:");
         float valX = input.nextFloat();
 
-        System.err.println("Digite o valor do ponto x:");
+        System.out.println("Digite o valor do ponto x:");
         float valY = input.nextFloat();
 
         Uni4Exe19 classeExec = new Uni4Exe19(valX, valY);
-        System.err.println("Quadrante " + classeExec.verificarQuadranteCorreto());
+        System.out.println("Quadrante " + classeExec.verificarQuadranteCorreto());
 
         input.close();
     }   
