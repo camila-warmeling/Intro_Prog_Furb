@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 public class Uni5Exe15 {
 
-//nome e nota de duas provas descreva um algoritmo para informar a média de cada aluno. Considere que a 
-//leitura dos dados deve ser finalizada quando o nome do aluno for “fim”.
-
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
