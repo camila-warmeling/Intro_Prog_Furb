@@ -3,11 +3,6 @@ package unidade5.exerciciosUni5;
 import java.util.Scanner;
 
 public class Uni5Exe17 {
-//Descreva um algoritmo que leia o número de inscrição e a altura de um atleta em uma competição e informe:
-//o número de inscrição e a altura do atleta mais alto;
-//o número de inscrição e a altura do atleta mais baixo;
-//a altura média do grupo de atletas.
-//A leitura deve ser finalizada ao digitar 0 para o número de inscrição. pedir inscrição por último
 
     public static void main(String[] args) {
     
