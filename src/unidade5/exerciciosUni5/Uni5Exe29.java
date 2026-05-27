@@ -3,7 +3,6 @@ package unidade5.exerciciosUni5;
 import java.util.Scanner;
 
 public class Uni5Exe29 {
-//Cédulas de 1, 2, 5, 10 e 20. Faça um programa que leia um valor e informe a quantidade mínima de cédulas. 
 
     public static void main(String[] args) {
         
