@@ -34,13 +34,17 @@ public class Uni6Exe03ArrayList {
     }
 
     public void imprimir(){
-        for(int i=0; i<tamanho; i++){
-            System.out.println("Posição "+i+" valor: " + String.format("%.2f",valores.get(i)));
+        int i = 1;
+
+        //foreach
+        for(Double item : valores){
+        System.out.println("Posição "+i+" valor: " + String.format("%.2f",item));
+            i++;
         }
     }
 
     public static void main(String[] args) {
-        Uni6Exe03Vetor exec03 = new Uni6Exe03Vetor();
+        Uni6Exe03ArrayList exec03 = new Uni6Exe03ArrayList();
         exec03.lerValores();
         exec03.alterarValores();
         exec03.imprimir();
