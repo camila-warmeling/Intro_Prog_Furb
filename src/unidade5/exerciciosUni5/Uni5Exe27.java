@@ -44,6 +44,7 @@ public class Uni5Exe27 {
 
                 System.out.println("O funcionário ganhará R$"+String.format("%.2f",valorDia)+" no dia "+dia+" de abril.");
                 System.out.println("Novo funcionário (1.sim 2.não)?");
+                novoFuncionario = input.nextInt();
             }else{
                 System.out.println("Dia inválido!");
             }
