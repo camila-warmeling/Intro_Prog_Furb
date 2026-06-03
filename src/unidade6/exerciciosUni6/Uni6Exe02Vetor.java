@@ -9,27 +9,27 @@ public class Uni6Exe02Vetor {
     public double numeros[] = new double[tamanho];
     public double soma = 0, media;
 
-    public Uni6Exe02Vetor(){
+    private Uni6Exe02Vetor(){
         lerValores();
         calcularMedia();
         mostrarValoresMaioresMedia();
     }
 
-    public void lerValores(){
+    private void lerValores(){
         for(int i=0; i<tamanho; i++){
             System.out.println("Digite o primeiro valor:");
             numeros[i] = input.nextDouble();
         }
     }
 
-    public void calcularMedia(){
+    private void calcularMedia(){
         for(int i=0; i<tamanho; i++){
             soma += numeros[i];
         }
         media = soma/tamanho;
     }
 
-    public void mostrarValoresMaioresMedia(){
+    private void mostrarValoresMaioresMedia(){
         System.out.println("A média é:" + String.format("%.2f",media));
         for(int i=0; i<tamanho; i++){
             if(numeros[i] > media){

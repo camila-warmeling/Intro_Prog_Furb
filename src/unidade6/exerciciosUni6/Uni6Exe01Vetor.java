@@ -7,19 +7,19 @@ public class Uni6Exe01Vetor {
     Scanner input = new Scanner(System.in);
     public int[] numeros = new int [10];
 
-    public Uni6Exe01Vetor(){
+    private Uni6Exe01Vetor(){
         lerDados();
         mostrarNumerosInverso();
     }
 
-    public void lerDados(){
+    private void lerDados(){
         for(int i=0; i<10; i++){
             System.out.println("Digite o " + (i+1) + "º número");
             numeros[i] = input.nextInt();
         }
     }
 
-    public void mostrarNumerosInverso(){
+    private void mostrarNumerosInverso(){
         for(int i=9; i>=0; i--){
             System.out.println(numeros[i]);
         }

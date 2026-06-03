@@ -8,18 +8,18 @@ public class Uni6Exe03Vetor {
     public double[] valores = new double[tamanho];
     public Scanner input = new Scanner(System.in);
 
-    public Uni6Exe03Vetor(){
+    private Uni6Exe03Vetor(){
 
     }
 
-    public void lerValores(){
+    private void lerValores(){
         for(int i=0; i<tamanho; i++){
             System.out.println("Digite o valor:");
             valores[i] = input.nextDouble();
         }
     }
 
-    public void alterarValores(){
+    private void alterarValores(){
         for(int i=0; i<tamanho; i++){
             if(i % 2 == 0){
                 //par aumenta o valor em 2%
@@ -31,7 +31,7 @@ public class Uni6Exe03Vetor {
         }
     }
 
-    public void imprimir(){
+    private void imprimir(){
         for(int i=0; i<tamanho; i++){
             System.out.println("Posição "+i+" valor: " + String.format("%.2f",valores[i]));
         }

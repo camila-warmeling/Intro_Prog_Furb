@@ -9,12 +9,12 @@ public class Uni6Exe01ArrayList {
     //começa vazio
     public ArrayList<Integer> numeros = new ArrayList<>();
 
-    public Uni6Exe01ArrayList(){
+    private Uni6Exe01ArrayList(){
         lerDados();
         mostrarNumerosInverso();
     }
 
-    public void lerDados(){
+    private void lerDados(){
         for(int i=0; i<10; i++){
             System.out.println("Digite o " + (i+1) + "º número");
             int valor = input.nextInt();
@@ -22,7 +22,7 @@ public class Uni6Exe01ArrayList {
         }
     }
 
-    public void mostrarNumerosInverso(){
+    private void mostrarNumerosInverso(){
         for(int i=9; i>=0; i--){
             System.out.println(numeros.get(i));
         }

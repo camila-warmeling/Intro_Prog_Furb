@@ -9,11 +9,11 @@ public class Uni6Exe03ArrayList {
     public ArrayList<Double> valores = new ArrayList<>();
     public Scanner input = new Scanner(System.in);
 
-    public Uni6Exe03ArrayList(){
+    private Uni6Exe03ArrayList(){
 
     }
 
-    public void lerValores(){
+    private void lerValores(){
         for(int i=0; i<tamanho; i++){
             System.out.println("Digite o valor:");
             double valor = input.nextDouble();
@@ -21,7 +21,7 @@ public class Uni6Exe03ArrayList {
         }
     }
 
-    public void alterarValores(){
+    private void alterarValores(){
         for(int i=0; i<tamanho; i++){
             if(i % 2 == 0){
                 //par aumenta o valor em 2%
@@ -33,7 +33,7 @@ public class Uni6Exe03ArrayList {
         }
     }
 
-    public void imprimir(){
+    private void imprimir(){
         int i = 1;
         //foreach
         for(Double item : valores){
