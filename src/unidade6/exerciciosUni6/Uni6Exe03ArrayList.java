@@ -35,7 +35,6 @@ public class Uni6Exe03ArrayList {
 
     public void imprimir(){
         int i = 1;
-
         //foreach
         for(Double item : valores){
         System.out.println("Posição "+i+" valor: " + String.format("%.2f",item));
