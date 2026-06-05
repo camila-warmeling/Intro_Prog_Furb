@@ -1,30 +1,32 @@
 package unidade6.exerciciosUni6;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
-public class Uni6Exe05Vetor {
+public class Uni6Exe05ArrayList {
     private Scanner input = new Scanner(System.in);
-    private String[] perguntas = new String[]{
+    private ArrayList<String> perguntas  = new ArrayList<>(List.of( 
         "Gosta de música sertaneja?",
         "Gosta de futebol?",
         "Gosta de seriados?",
         "Gosta de redes sociais?",
         "Gosta da Oktoberfest?"
-    };
-    //perguntas.length retorna o tamanho do vetor perguntas
-    private String[] rapaz = new String[perguntas.length]; 
-    private String[] moca = new String[perguntas.length]; 
+    ));
+    private ArrayList<String> rapaz = new ArrayList<>(); 
+    private ArrayList<String> moca = new ArrayList<>(); 
 
-    private Uni6Exe05Vetor(){
+    private Uni6Exe05ArrayList(){
         executarRespostas();
         mostrarResultadoAfinidade();
     }
 
-    private void responderPerguntas(String[] vetorRespostas){
-        for(int i=0; i<perguntas.length; i++){
-            System.out.println(perguntas[i]);
+    private void responderPerguntas(ArrayList<String> listaRespostas){
+        for(int i=0; i<perguntas.size(); i++){
+            System.out.println(perguntas.get(i));
             System.out.println("Digite a resposta(SIM, NÃO ou IND):");
-            vetorRespostas[i] = input.next().toUpperCase();
+            String resposta = input.next().toUpperCase();
+            listaRespostas.add(resposta);
         }
     }
 
@@ -38,16 +40,15 @@ public class Uni6Exe05Vetor {
 
     private int calcularAfinidade(){
         int afinidade = 0;
-        for(int i=0; i<perguntas.length; i++){
-            if(rapaz[i].equals(moca[i])){
+        for(int i=0; i<perguntas.size(); i++){
+            if(rapaz.get(i).equals(moca.get(i))){
                 afinidade += 3;
-            }else if(rapaz[i].equals("IND") || moca[i].equals("IND")){
+            }else if(rapaz.get(i).equals("IND") || moca.get(i).equals("IND")){
                 afinidade ++;
             }else{
                 afinidade -= 2;
             }
         }
-
         return afinidade;
     }
 
@@ -67,8 +68,8 @@ public class Uni6Exe05Vetor {
             System.out.println("Vocês se odeiam!");
         }
     }
-    
+
     public static void main(String[] args) {
-        new Uni6Exe05Vetor();
+        new Uni6Exe05ArrayList();
     }
 }
