@@ -5,16 +5,16 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Uni6Exe05ArrayList {
-    private Scanner input = new Scanner(System.in);
-    private ArrayList<String> perguntas  = new ArrayList<>(List.of( 
+    public Scanner input = new Scanner(System.in);
+    public ArrayList<String> perguntas  = new ArrayList<>(List.of( 
         "Gosta de música sertaneja?",
         "Gosta de futebol?",
         "Gosta de seriados?",
         "Gosta de redes sociais?",
         "Gosta da Oktoberfest?"
     ));
-    private ArrayList<String> rapaz = new ArrayList<>(); 
-    private ArrayList<String> moca = new ArrayList<>(); 
+    public ArrayList<String> rapaz = new ArrayList<>(); 
+    public ArrayList<String> moca = new ArrayList<>(); 
 
     private Uni6Exe05ArrayList(){
         executarRespostas();

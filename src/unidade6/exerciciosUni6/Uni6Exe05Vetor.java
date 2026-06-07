@@ -3,8 +3,8 @@ package unidade6.exerciciosUni6;
 import java.util.Scanner;
 
 public class Uni6Exe05Vetor {
-    private Scanner input = new Scanner(System.in);
-    private String[] perguntas = new String[]{
+    public Scanner input = new Scanner(System.in);
+    public String[] perguntas = new String[]{
         "Gosta de música sertaneja?",
         "Gosta de futebol?",
         "Gosta de seriados?",
@@ -12,8 +12,8 @@ public class Uni6Exe05Vetor {
         "Gosta da Oktoberfest?"
     };
     //perguntas.length retorna o tamanho do vetor perguntas
-    private String[] rapaz = new String[perguntas.length]; 
-    private String[] moca = new String[perguntas.length]; 
+    public String[] rapaz = new String[perguntas.length]; 
+    public String[] moca = new String[perguntas.length]; 
 
     private Uni6Exe05Vetor(){
         executarRespostas();
