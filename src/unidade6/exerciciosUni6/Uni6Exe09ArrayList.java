@@ -1,28 +1,37 @@
 package unidade6.exerciciosUni6;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Uni6Exe09Vetor {
-
+public class Uni6Exe09ArrayList {
     public Scanner input = new Scanner(System.in);
     public int tamanho = 30;
-    public int[][] vetorMatrizDadosClientes = new int[tamanho][3];//linha e depois coluna
+    public ArrayList<ArrayList<Integer>> listaMatriz = new ArrayList<>(); //recebe uma lista de inteiros
     public int quantHomens = 0;
 
-    private Uni6Exe09Vetor(){
+    private Uni6Exe09ArrayList(){
         solicitarDados();
         mostrarResultados();
     }
 
     private void solicitarDados(){
+        int sexo, nota, idade;
         for(int i=0; i<tamanho; i++){
+            ArrayList<Integer> dadosClientes = new ArrayList<>();
+
             System.out.println("--------DIGITE OS DADOS--------");
             System.out.println("Digite o sexo (1 = feminino, 2 = masculino):");
-            vetorMatrizDadosClientes[i][0] = input.nextInt();
+            sexo = input.nextInt();
             System.out.println("Digite a nota (0-10):");
-            vetorMatrizDadosClientes[i][1] = input.nextInt();
+            nota = input.nextInt();
             System.out.println("Digite a idade:");
-            vetorMatrizDadosClientes[i][2] = input.nextInt();
+            idade = input.nextInt();
+
+            dadosClientes.add(sexo);
+            dadosClientes.add(nota);
+            dadosClientes.add(idade);
+
+            listaMatriz.add(dadosClientes);
         }
     }   
 
@@ -30,9 +39,9 @@ public class Uni6Exe09Vetor {
         float mediaCinema;
         int somaNotasCinema = 0;
         for(int i=0; i<tamanho; i++){
-            somaNotasCinema += vetorMatrizDadosClientes[i][1];
+            somaNotasCinema += listaMatriz.get(i).get(1);
         }
-        mediaCinema = (float)somaNotasCinema/tamanho; //(float)variável - transforma aquela variável no tipo float
+        mediaCinema = (float)somaNotasCinema/tamanho; 
         return mediaCinema;
     }
 
@@ -41,9 +50,9 @@ public class Uni6Exe09Vetor {
         int somaNotaHomens = 0;
 
         for(int i=0; i<tamanho; i++){
-            if(vetorMatrizDadosClientes[i][0] == 2){
+            if(listaMatriz.get(i).get(0) == 2){
                 quantHomens ++;
-                somaNotaHomens += vetorMatrizDadosClientes[i][1];
+                somaNotaHomens += listaMatriz.get(i).get(1);
             }
         }
         mediaNotasHomens = (float)somaNotaHomens/quantHomens;
@@ -51,50 +60,53 @@ public class Uni6Exe09Vetor {
         return mediaNotasHomens;
     }
 
-    private int[][] encontrarMulheresNoVetorMatriz(){
-        int[][] vetorMulheres = new int[tamanho-quantHomens][2];
-        int linhaVetorMulheres = 0;
+    private ArrayList<ArrayList<Integer>> encontrarMulheresNoVetorMatriz(){
+        ArrayList<ArrayList<Integer>> listaMulheres = new ArrayList<>();
 
         for(int i=0; i<tamanho; i++){
-            if(vetorMatrizDadosClientes[i][0] == 1){
-                vetorMulheres[linhaVetorMulheres][0] = vetorMatrizDadosClientes[i][1];//nota
-                vetorMulheres[linhaVetorMulheres][1] = vetorMatrizDadosClientes[i][2];//idade
+            if(listaMatriz.get(i).get(0) == 1){
+                ArrayList<Integer> dadosMulher = new ArrayList<>();
 
-                linhaVetorMulheres ++;
+                int notaMulher = listaMatriz.get(i).get(1);//nota
+                int idadeMulher = listaMatriz.get(i).get(2);//idade
+
+                dadosMulher.add(notaMulher);
+                dadosMulher.add(idadeMulher);
+                listaMulheres.add(dadosMulher);
             }
         }
 
-        return vetorMulheres;
+        return listaMulheres;
     }
 
     private int encontrarNotaMulherMaisJovem(){
-        int[][] vetorMulheresCinema = encontrarMulheresNoVetorMatriz();
+        ArrayList<ArrayList<Integer>> listaMulheresCinema = encontrarMulheresNoVetorMatriz();
 
-        if(vetorMulheresCinema.length == 0){
+        if(listaMulheresCinema.size() == 0){
             return 0;
         }
 
-        int mulherMaisJovem = vetorMulheresCinema[0][1];
+        int mulherMaisJovem = listaMulheresCinema.get(0).get(1);
         int indiceMulherMaisJovem = 0;
 
-        for(int i=0; i<vetorMulheresCinema.length; i++){
-            if(mulherMaisJovem > vetorMulheresCinema[i][1]){
-                mulherMaisJovem = vetorMulheresCinema[i][1];
+        for(int i=0; i<listaMulheresCinema.size(); i++){
+            if(mulherMaisJovem > listaMulheresCinema.get(i).get(1)){
+                mulherMaisJovem = listaMulheresCinema.get(i).get(1);
                 indiceMulherMaisJovem = i;
             }
         }
-        int notaMulherMaisJovem = vetorMulheresCinema[indiceMulherMaisJovem][0];
+        int notaMulherMaisJovem = listaMulheresCinema.get(indiceMulherMaisJovem).get(0);
 
         return notaMulherMaisJovem;
     }
 
     private int calcularNotasMulheresMaiorMediaCinema(){
-        int[][] vetorMulheresCinema = encontrarMulheresNoVetorMatriz();
+        ArrayList<ArrayList<Integer>> listaMulheresCinema = encontrarMulheresNoVetorMatriz();
         float mediaCinema = calcularMediaNotasCinema();
         int quantMulheresAcima50MediaMaior = 0;
 
-        for(int i=0; i<vetorMulheresCinema.length; i++){
-            if(vetorMulheresCinema[i][0]>mediaCinema && vetorMulheresCinema[i][1] > 50){
+        for(int i=0; i<listaMulheresCinema.size(); i++){
+            if(listaMulheresCinema.get(i).get(0)>mediaCinema && listaMulheresCinema.get(i).get(1) > 50){
                 quantMulheresAcima50MediaMaior ++;
             }
         }
@@ -122,6 +134,6 @@ public class Uni6Exe09Vetor {
     }
 
     public static void main(String[] args) {
-        new Uni6Exe09Vetor();
+        new Uni6Exe09ArrayList();
     }
 }
